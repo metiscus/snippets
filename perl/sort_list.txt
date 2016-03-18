@@ -1,0 +1,4 @@
+Sorts a list of tuples based on the value of a tuple
+my @sorted = map { [$_->[1], $_->[0]] }
+             sort { $::b->[1] <=> $::a->[1] }
+             map { [$_, split('\t', $_) ] } @output;
